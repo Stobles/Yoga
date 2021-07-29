@@ -1,5 +1,5 @@
 .main{
-    background: url(../../img/background/main_bg.png);
+    background: url(/img/background/main_bg.png);
     background-size: cover;
     @media(max-width: $md2+px){
         background-position: 40%;
@@ -38,6 +38,9 @@
         position: absolute;
         top: -20%;
         right: 0;
+        img{
+            background: none;
+        }
     }
 
     &__inner{
@@ -134,6 +137,9 @@
         top: 0;
         left: 50%;
         transform: translateX(-50%);
+        img{
+            background: none;
+        }
     }
 
     &__inner{
@@ -232,6 +238,8 @@
     }
 
     &__img{
+        background: url(../../img/lazyLoading/loading.gif);
+        background-size: cover;
         @media(max-width: $md2+px){
             margin: 0px 0px 20px 0px;
         }
@@ -405,10 +413,17 @@
 
     &__img{
         display: flex;
+        position: relative;
         flex: 0 1 400px;
         justify-content: center;
         @media(min-width: $md2+px){
             justify-content: flex-end;
+        }
+        img{
+            @media(min-width: $md2+px){
+                position: absolute;
+                bottom: 0;
+            }
         }
     }
 

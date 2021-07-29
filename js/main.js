@@ -9,4 +9,8 @@ document.addEventListener('click', (e) => {
             document.querySelector('.header__navigation').style.transform = ''
         }
     }
+
+    if(ClickTarget.closest('.preteachers__slide--btn') || ClickTarget.classList.contains('preteachers__slide--btn')){
+        
+    }
 })
