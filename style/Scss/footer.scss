@@ -212,6 +212,10 @@
     &__location{
         flex: 0 1 270px;
         &--map{
+            background: url(../../img/lazyLoading/loading.gif);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 10%;
             width: 100%;
             height: 300px;
             @media(min-width: $md1+px){
