@@ -31,9 +31,7 @@ function lazyScroll() {
 function lazyScrollCheck() {
     lazyBackground.forEach(background =>{
         if(pageYOffset > background.getBoundingClientRect().top + pageYOffset - windowH ){
-            setTimeout(function(){
-                background.classList.remove('lazy')
-            },7000)
+            background.classList.remove('lazy')
         }
     })
     let imgIndex = lazyImagesPositions.findIndex(
