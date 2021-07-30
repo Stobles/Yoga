@@ -1,1 +1,0 @@
-import Swiper from '../node_modules/swiper/bundle';
