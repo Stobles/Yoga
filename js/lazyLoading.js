@@ -1,6 +1,7 @@
 "use strict"
 
-const lazyImages = document.querySelectorAll('img[data-src]')
+const lazyBackground = document.querySelectorAll('.lazy')
+const lazyImages = document.querySelectorAll('[data-src]')
 const loadMapBlock = document.querySelector('[data-map]')
 const windowH = document.documentElement.clientHeight
 
@@ -19,7 +20,7 @@ window.addEventListener('scroll', lazyScroll)
 window.addEventListener('load', lazyScroll)
 
 function lazyScroll() {
-    if(document.querySelectorAll('img[data-src]').length > 0){
+    if(document.querySelectorAll('[data-src]').length > 0){
         lazyScrollCheck()
     }
     if(!loadMapBlock.classList.contains('_loaded')){
@@ -28,6 +29,11 @@ function lazyScroll() {
 }
 
 function lazyScrollCheck() {
+    lazyBackground.forEach(background =>{
+        if(pageYOffset > background.getBoundingClientRect().top + pageYOffset - windowH ){
+            background.classList.remove('lazy')
+        }
+    })
     let imgIndex = lazyImagesPositions.findIndex(
         item => pageYOffset > item - windowH
     )

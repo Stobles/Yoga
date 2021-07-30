@@ -335,6 +335,10 @@ body.lock {
   }
 }
 
+.main.lazy {
+  background: none;
+}
+
 .about {
   position: relative;
 }

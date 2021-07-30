@@ -1,5 +1,3 @@
-
-
 new Swiper('.swiper-container', {
 
     observer: true,
