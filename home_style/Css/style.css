@@ -1,3 +1,4 @@
+@import "../../node_modules/swiper/swiper-bundle.css";
 @font-face {
   font-family: PoppinsRegular;
   src: url(../../fonts/Poppins-Regular.ttf);
@@ -363,15 +364,17 @@ body.lock {
             flex-direction: column;
   }
 }
-.about__video {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 570px;
-          flex: 0 1 570px;
+@media (min-width: 991.98px) {
+  .about__video {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 570px;
+            flex: 0 1 570px;
+  }
 }
 .about__video--body {
-  min-height: 350px;
   border-radius: 10px;
   overflow: hidden;
+  padding: 0px 0px 61.4035087719% 0px;
 }
 .about__video--title {
   font-size: 48px;

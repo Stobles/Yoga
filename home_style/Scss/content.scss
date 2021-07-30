@@ -53,12 +53,13 @@
     }
 
     &__video{
-        flex: 0 1 570px;
-
+        @media(min-width: $md2+px){
+            flex: 0 1 570px;
+        }
         &--body{
-            min-height: 350px;
             border-radius: 10px;
             overflow: hidden;
+            padding: 0px 0px 350px/570px * 100% 0px;
         }
 
         &--title{
