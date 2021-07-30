@@ -16,6 +16,7 @@ if (lazyImages.length > 0){
 }
 
 window.addEventListener('scroll', lazyScroll)
+window.addEventListener('load', lazyScroll)
 
 function lazyScroll() {
     if(document.querySelectorAll('img[data-src]').length > 0){
