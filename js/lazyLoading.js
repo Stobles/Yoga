@@ -34,7 +34,7 @@ function lazyScrollCheck() {
             setTimeout(
                 function () {
                     background.classList.remove('lazy')
-                }, 20)
+                }, 100)
         }
     })
     let imgIndex = lazyImagesPositions.findIndex(
