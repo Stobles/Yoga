@@ -1,8 +1,6 @@
 "use strict"
 
-const lazyBackground = document.querySelectorAll('.lazy')
-const lazyImages = document.querySelectorAll('[data-src]')
-const loadMapBlock = document.querySelector('[data-map]')
+const lazyImages = document.querySelectorAll('img[data-src]')
 const windowH = document.documentElement.clientHeight
 
 let lazyImagesPositions = []
@@ -17,23 +15,14 @@ if (lazyImages.length > 0){
 }
 
 window.addEventListener('scroll', lazyScroll)
-window.addEventListener('load', lazyScroll)
 
 function lazyScroll() {
-    if(document.querySelectorAll('[data-src]').length > 0){
+    if(document.querySelectorAll('img[data-src]').length > 0){
         lazyScrollCheck()
-    }
-    if(!loadMapBlock.classList.contains('_loaded')){
-        getMap()
     }
 }
 
 function lazyScrollCheck() {
-    lazyBackground.forEach(background =>{
-        if(pageYOffset > background.getBoundingClientRect().top + pageYOffset - windowH ){
-           background.classList.remove('lazy')
-        }
-    })
     let imgIndex = lazyImagesPositions.findIndex(
         item => pageYOffset > item - windowH
     )
@@ -44,20 +33,5 @@ function lazyScrollCheck() {
         }
     }
     delete lazyImagesPositions[imgIndex]
-    
-}
-
-function getMap() {
-    const loadMapBlockPos = loadMapBlock.getBoundingClientRect().top + pageYOffset;
-    if(pageYOffset > loadMapBlockPos - windowH){
-        const loadMapUrl = loadMapBlock.dataset.map
-        if(loadMapUrl){
-            loadMapBlock.insertAdjacentHTML(
-                "beforeend",
-                `<iframe src="${loadMapUrl}" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`
-            );
-            loadMapBlock.classList.add('_loaded');
-        }
-    }
     
 }
