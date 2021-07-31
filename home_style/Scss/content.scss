@@ -1,5 +1,5 @@
-.main{
-    background: url(../../img/background/main_bg.png);
+.main{ 
+    background: url(../../img/background/main_bg.webp);
     background-size: cover;
     @media(max-width: $md2+px){
         background-position: 40%;
@@ -12,6 +12,11 @@
         gap: 30px;
         min-height: 980px;
 
+        h1{
+            display: inline-block;
+            text-align: right;
+        }
+
     }
 
     &__item{
@@ -19,8 +24,9 @@
         font-family: $font-family-PoppinsLight;
         color: $purpleColor;
         text-shadow: 2px 2px 15px;
+        padding: 0px 0px 30px 0px;
         &:first-child{
-            margin: 0px 70px 0px 0px;
+            padding: 0px 70px 30px 0px;
         }
 
         @media (max-width: $md2+px) {
@@ -31,9 +37,6 @@
     }
 }
 
-.main.lazy{
-    background: none;
-}
 
 .about{
     position: relative;
@@ -125,7 +128,7 @@
 .classes{
     position: relative;
     background-color: #f1f3f8;
-    background: url(../../img/background/classes_bg.png);
+    background: url(../../img/background/classes_bg.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -211,6 +214,7 @@
     }
 }
 
+
 .subscribe{
     &__inner{
         padding: 125px 0px 120px 0px;
@@ -264,7 +268,7 @@
 }
 
 .preteachers{
-    background: url(../../img/background/preteachers_bg.png);
+    background: url(../../img/background/preteachers_bg.webp);
     background-position: center;
     &__inner{
         display: flex;

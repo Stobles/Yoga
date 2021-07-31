@@ -289,7 +289,7 @@ body.lock {
 }
 
 .main {
-  background: url(../../img/background/main_bg.png);
+  background: url(../../img/background/main_bg.webp);
   background-size: cover;
 }
 @media (max-width: 991.98px) {
@@ -314,11 +314,16 @@ body.lock {
   gap: 30px;
   min-height: 980px;
 }
+.main__inner h1 {
+  display: inline-block;
+  text-align: right;
+}
 .main__item {
   font-size: 72px;
   font-family: PoppinsLight;
   color: #7492ec;
   text-shadow: 2px 2px 15px;
+  padding: 0px 0px 30px 0px;
 }
 @media (max-width: 1200px) {
   .main__item {
@@ -326,17 +331,13 @@ body.lock {
   }
 }
 .main__item:first-child {
-  margin: 0px 70px 0px 0px;
+  padding: 0px 70px 30px 0px;
 }
 @media (max-width: 991.98px) {
   .main__item {
     color: #fff;
     text-shadow: 2px 2px 15px #333;
   }
-}
-
-.main.lazy {
-  background: none;
 }
 
 .about {
@@ -461,7 +462,7 @@ body.lock {
 .classes {
   position: relative;
   background-color: #f1f3f8;
-  background: url(../../img/background/classes_bg.png);
+  background: url(../../img/background/classes_bg.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -597,7 +598,7 @@ body.lock {
 }
 
 .preteachers {
-  background: url(../../img/background/preteachers_bg.png);
+  background: url(../../img/background/preteachers_bg.webp);
   background-position: center;
 }
 .preteachers__inner {
