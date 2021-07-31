@@ -1,4 +1,4 @@
-new Swiper('.swiper-container', {
+new Swiper('.classes__slider--container', {
 
     observer: true,
     observeParents: true,
