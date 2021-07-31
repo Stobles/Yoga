@@ -303,7 +303,7 @@ body.lock {
 }
 
 .main {
-  background: url(../../img/about_html/background/main_bg.png);
+  background: url(../../img/about_html/background/main_bg.webp);
   background-repeat: no-repeat;
   background-position: 20% -5%;
 }
@@ -386,7 +386,7 @@ body.lock {
 }
 
 .quote {
-  background: url(../../img/about_html/background/quote_bg.png) no-repeat center;
+  background: url(../../img/about_html/background/quote_bg.webp) no-repeat center;
   background-size: cover;
 }
 .quote__body {
